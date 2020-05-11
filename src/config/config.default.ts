@@ -32,9 +32,6 @@ export default (appInfo: EggAppInfo) => {
     }
   }
 
-  config.mongoose = {
-    url: 'mongodb://39.108.77.211:30772/reportRecords'
-  }
   /**
    * 内部中间件没有处理到的异常,在此处统一处理
    */

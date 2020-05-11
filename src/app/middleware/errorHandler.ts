@@ -21,6 +21,7 @@ export default () => {
         ctx.body = ctx.toBody(retCodeEnum.success, errCodeEnum.success, 'success', null)
       }
     } catch (e) {
+      ctx.logger.error(e)
       let retcode = retCodeEnum.serverError
       let erreode = errCodeEnum.autoSnapError
       let errMsg = 'not defined error'

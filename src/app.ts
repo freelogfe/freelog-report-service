@@ -10,12 +10,12 @@ export default class AppBootHook {
 
   async didReady() {
     // 应用已经启动完毕
-    console.log('[App]: Did ready!')
+    console.log('[App report]: Did ready!')
   }
 
   async serverDidReady() {
     // http / https server 已启动，开始接受外部请求
     // 此时可以从 app.server 拿到 server 的实例
-    console.log('[Server]: Did ready!')
+    console.log('[Server report]: Did ready!')
   }
 }
