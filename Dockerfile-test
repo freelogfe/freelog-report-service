@@ -1,0 +1,19 @@
+FROM daocloud.io/node:10.15
+
+MAINTAINER daizch <daizech@gmail.com>
+
+RUN mkdir -p /data/freelog-report-service
+
+WORKDIR /data/freelog-report-service
+
+COPY . /data/freelog-report-service
+
+RUN npm install
+
+ENV NODE_ENV test
+ENV EGG_SERVER_ENV test
+ENV PORT 5113
+
+EXPOSE 5113
+
+CMD [ "npm", "start" ]
